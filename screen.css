@@ -1,0 +1,379 @@
+
+@font-face {
+    font-family: 'Bitstream Iowan Old Style BT';
+    font-style: normal;
+    font-weight: normal;
+    src: url('bitstream-iowan-old-style-bt-586c36a8d7712.woff') format('woff');
+    }
+
+ @font-face {
+    font-family: 'Bitstream Iowan Old Style Bold BT';
+    font-style: normal;
+    font-weight: bold;
+    src: url('bitstream-iowan-old-style-bold-bt-586c371d8d669.woff') format('woff');
+    }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Bitstream Iowan Old Style BT","Cardo",sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white; 
+    padding: 30px 20px;
+    height: 100px;
+    border-bottom: 1px solid black;
+}
+
+.logo img {
+    height: 50px;
+    margin:20px 20px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin:  30px;
+}
+
+.nav-item {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    padding: 10px 10px;
+    transition: border 0.3s;
+}
+
+.nav-item:hover, .nav-item.selected {
+    color:navy;
+    border-bottom: 2px solid navy;
+}
+
+.contact-button a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    padding: 8px 15px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin:20px 20px;
+        
+}
+
+.contact-button a:hover {
+    background-color: black;
+    color: white;
+}
+
+.introduction {
+    margin-top: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 85vh; 
+    background-image: url('intro_background.png'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    
+}
+
+.intro-content {
+    width: 60%; 
+    margin-left: 20%; 
+    margin-top: 5%;
+    color: black;
+}
+
+h1 {
+    font-size: 46px;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+.flower{
+    margin: 0 20px;
+    display: inline-block;
+}
+
+#name{
+    color:navy;
+}
+.intro-list {
+    list-style-position: inside; 
+    margin-left: 30px;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.projects-section {
+    padding: 0px 20px;
+    background-color: white;
+    margin-bottom: 300px;
+}
+
+.projects-header {
+    width: flex;
+    margin: 20px 5px ;
+    border: 1px solid black; 
+    padding: 10px 50px;
+    text-align: left;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+
+.project-card {
+    width: calc(50% - 10px); /* This calculations allows me to create two cards per row, with a small gap. I google this and learn it from W3school/Css References/Css Functions */
+    border: 1px solid black; 
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid black;
+    object-fit: cover; 
+}
+
+
+.project-details {
+    background-color: white;
+    padding: 15px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+
+.project-name {
+    font-family: "inter";
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+
+.project-timeline {
+    font-family: "inter";
+    font-size: 16px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+}
+
+
+.tag {
+    background-color: navy;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 30px;
+    font-size: 14px;
+}
+
+
+
+footer {
+    background-color: #f0f1f3;
+    text-align: center;
+    padding: 15px;
+    font-size: 10px;
+    color: black;
+    border-top: 1px solid black;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+.gallery-section {
+    padding: 50px 20px;
+    background-image: url('gallerybg.png'); 
+    background-size: contain; 
+    background-repeat: repeat-y; 
+    background-position: top center; 
+    background-color: white;
+    min-height: 80vh;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* I research how to better set-up grid-template-columns on gooogle, I realize with fr units we can creat flexible grids by specifying the size of a track as a fraction of the space, and repeats allows me to effectively define the mumbe rof the grid-template-columns */
+    gap: 4vh;
+    margin-bottom: 200px;
+}
+
+.gallery-item {
+    width: 100%; 
+    max-width: 350px; 
+    aspect-ratio: 1 / 1; 
+    overflow: hidden;
+    border: 1px solid black;
+}
+
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-title{
+     margin-top: 157px;
+     width: 60%; 
+     margin-left: 20%; 
+     color: black;
+}
+
+
+.about-section {
+    margin-top:100px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: white;
+    
+}
+
+
+.s-e-section{
+    padding: 0px 20px;
+    background-color: white;
+    margin-bottom: 200px;
+    
+}
+.skill-box {
+    flex: 1;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    margin: 0 5px;
+}
+
+h3{
+    padding: 5px;
+    text-align: center;
+    list-style-type: decimal;
+    margin-bottom: 5px;
+}
+
+.skill-box ul{
+    align-self: center;
+    list-style-type: square;
+}
+
+.skill-box ul ul {
+    margin-left: 10%;
+    margin-bottom: 5px;
+    list-style-type: circle;
+}
+    
+#experience-list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 30px;
+}
+
+
+.contact-section {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+
+.contact-table {
+    width: 50%;
+    background-color: white;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 8px;
+    margin: auto;
+}
+
+.contact-table td {
+    padding: 5px;
+    vertical-align: middle;
+}
+
+.contact-table label {
+    font-weight: normal;
+    font-size: 18px;
+    margin-left: 30px;
+}
+
+.contact-table input, 
+.contact-table textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #c1c1c1;
+    border-radius: 4px;
+}
+
+
+.contact-table {
+    border-color: navy;
+    outline: none;
+}
+
+.submit-row {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.submit-row button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.submit-row button:hover {
+    background-color: black;
+}
+
+    
